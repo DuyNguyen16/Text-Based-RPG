@@ -197,6 +197,8 @@ def player_turn(current_player, other_player):
             open_inventory(current_player)
         elif current_player_action == 3:
             current_player.attack(other_player)
+            current_player.turn = False
+            other_player.turn = True
 
 
 def battle():
